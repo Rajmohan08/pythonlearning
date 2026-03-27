@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  multi-agent:
+    build: .
+    container_name: multi-agent-sample
+    environment:
+      - PYTHONPATH=/app/src
+    command: ["python", "-m", "multi_agent.app", "--task", "Draft a concise build/deploy flow for a multi-agent system"]

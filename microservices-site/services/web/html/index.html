@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Microservices Catalog</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Microservices Catalog</h1>
+        <p>FastAPI + PostgreSQL behind a Kubernetes-ready edge.</p>
+      </header>
+
+      <section class="panel">
+        <h2>Add Item</h2>
+        <form id="item-form">
+          <label>
+            Name
+            <input type="text" id="name" required />
+          </label>
+          <label>
+            Description
+            <textarea id="description" rows="3"></textarea>
+          </label>
+          <button type="submit">Save</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Items</h2>
+        <div id="status" class="status">Loading...</div>
+        <ul id="items" class="items"></ul>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
