@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CI/CD DevOps Learning Roadmap</title>
+    <meta
+      name="description"
+      content="A practical CI/CD DevOps learning roadmap with flowchart and curated links."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Serif:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">CI/CD DevOps learning roadmap</p>
+          <h1>Build. Ship. Observe. Repeat.</h1>
+          <p class="hero-copy">
+            A focused roadmap to learn CI/CD and DevOps foundations with a clear flow
+            and practical milestones. Use this as a learning plan or share it as a
+            portfolio project on LinkedIn.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#roadmap">Start the path</a>
+            <a class="btn btn-secondary" href="#links">Important links</a>
+          </div>
+          <div class="hero-tags">
+            <span>Linux</span>
+            <span>GitHub Actions</span>
+            <span>Docker</span>
+            <span>Kubernetes</span>
+            <span>Terraform</span>
+            <span>Observability</span>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="panel-title">Weekly focus</div>
+          <ul>
+            <li>Weeks 1-2: Linux + Git + Networking</li>
+            <li>Weeks 3-4: Docker + Images + Registry</li>
+            <li>Weeks 5-6: CI pipelines + Testing</li>
+            <li>Weeks 7-8: Kubernetes + Deployments</li>
+            <li>Weeks 9-10: Terraform + Cloud basics</li>
+            <li>Weeks 11-12: Monitoring + Incident drills</li>
+          </ul>
+          <div class="panel-highlight">Goal: Ship a real project.</div>
+        </div>
+      </header>
+
+      <section id="roadmap" class="section reveal">
+        <div class="section-header">
+          <h2>Roadmap stages</h2>
+          <p>Follow the sequence. Every stage ends with a deliverable.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>1. Linux foundations</h3>
+            <p>Shell, processes, filesystems, SSH, permissions, and systemd basics.</p>
+            <div class="deliverable">Deliverable: run a web server on a VM.</div>
+          </article>
+          <article class="card">
+            <h3>2. Git + GitHub</h3>
+            <p>Branching, PRs, reviews, tags, and release notes.</p>
+            <div class="deliverable">Deliverable: release a versioned repo.</div>
+          </article>
+          <article class="card">
+            <h3>3. Docker + containers</h3>
+            <p>Dockerfiles, multi-stage builds, Compose, registries.</p>
+            <div class="deliverable">Deliverable: containerize a full stack app.</div>
+          </article>
+          <article class="card">
+            <h3>4. CI pipelines</h3>
+            <p>Testing, linting, caching, build artifacts, secrets.</p>
+            <div class="deliverable">Deliverable: CI pipeline on push + PR.</div>
+          </article>
+          <article class="card">
+            <h3>5. CD deployments</h3>
+            <p>Automate deployments to dev, staging, prod with approvals.</p>
+            <div class="deliverable">Deliverable: gated production deploy.</div>
+          </article>
+          <article class="card">
+            <h3>6. Kubernetes</h3>
+            <p>Deployments, services, probes, ingress, config, secrets.</p>
+            <div class="deliverable">Deliverable: app running in K8s.</div>
+          </article>
+          <article class="card">
+            <h3>7. Terraform</h3>
+            <p>VPC, IAM, clusters, modules, remote state, environments.</p>
+            <div class="deliverable">Deliverable: infra in code.</div>
+          </article>
+          <article class="card">
+            <h3>8. Observability</h3>
+            <p>Metrics, logs, traces, alerting, SLOs, incident response.</p>
+            <div class="deliverable">Deliverable: live dashboard + alert.</div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-header">
+          <h2>CI/CD flowchart</h2>
+          <p>Conceptual pipeline for modern DevOps delivery.</p>
+        </div>
+        <div class="flowchart">
+          <svg viewBox="0 0 980 360" role="img" aria-label="CI/CD flowchart">
+            <defs>
+              <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#1a6c6a" />
+                <stop offset="100%" stop-color="#e36a3b" />
+              </linearGradient>
+              <marker
+                id="arrow"
+                viewBox="0 0 10 10"
+                refX="9"
+                refY="5"
+                markerWidth="6"
+                markerHeight="6"
+                orient="auto-start-reverse"
+              >
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#0f1d1d" />
+              </marker>
+            </defs>
+            <rect x="20" y="40" width="160" height="70" rx="14" />
+            <text x="100" y="83">Plan</text>
+            <rect x="220" y="40" width="160" height="70" rx="14" />
+            <text x="300" y="83">Code</text>
+            <rect x="420" y="40" width="160" height="70" rx="14" />
+            <text x="500" y="83">Build</text>
+            <rect x="620" y="40" width="160" height="70" rx="14" />
+            <text x="700" y="83">Test</text>
+            <rect x="820" y="40" width="140" height="70" rx="14" />
+            <text x="890" y="83">Release</text>
+
+            <rect x="120" y="170" width="170" height="70" rx="14" />
+            <text x="205" y="213">Deploy</text>
+            <rect x="360" y="170" width="180" height="70" rx="14" />
+            <text x="450" y="213">Observe</text>
+            <rect x="620" y="170" width="180" height="70" rx="14" />
+            <text x="710" y="213">Learn</text>
+
+            <path d="M180 75 H220" />
+            <path d="M380 75 H420" />
+            <path d="M580 75 H620" />
+            <path d="M780 75 H820" />
+
+            <path d="M900 110 V170" />
+            <path d="M900 170 H800" />
+            <path d="M620 205 H540" />
+            <path d="M360 205 H290" />
+            <path d="M205 240 V300 H120" />
+            <path d="M120 300 H40 V120" />
+            <path d="M40 120 H100" />
+          </svg>
+        </div>
+      </section>
+
+      <section id="links" class="section reveal">
+        <div class="section-header">
+          <h2>Important links</h2>
+          <p>Shortlist of trusted resources for each stage.</p>
+        </div>
+        <div class="links-grid">
+          <a href="https://roadmap.sh/devops" target="_blank" rel="noreferrer">DevOps roadmap</a>
+          <a href="https://docs.github.com/actions" target="_blank" rel="noreferrer">GitHub Actions</a>
+          <a href="https://docs.docker.com" target="_blank" rel="noreferrer">Docker docs</a>
+          <a href="https://kubernetes.io/docs/home/" target="_blank" rel="noreferrer">Kubernetes docs</a>
+          <a href="https://developer.hashicorp.com/terraform/docs" target="_blank" rel="noreferrer">Terraform docs</a>
+          <a href="https://aws.amazon.com/devops/" target="_blank" rel="noreferrer">AWS DevOps</a>
+          <a href="https://grafana.com/docs/" target="_blank" rel="noreferrer">Grafana docs</a>
+          <a href="https://prometheus.io/docs/" target="_blank" rel="noreferrer">Prometheus docs</a>
+          <a href="https://www.nginx.com/resources/wiki/" target="_blank" rel="noreferrer">Nginx basics</a>
+          <a href="https://www.tldp.org/LDP/abs/html/" target="_blank" rel="noreferrer">Advanced Bash</a>
+        </div>
+      </section>
+
+      <section class="section reveal">
+        <div class="section-header">
+          <h2>Portfolio checklist</h2>
+          <p>Use this to structure your LinkedIn post and repo README.</p>
+        </div>
+        <div class="checklist">
+          <div class="check">Repo with CI pipeline + badges</div>
+          <div class="check">Dockerized services with versioned images</div>
+          <div class="check">Automated deployment to dev/staging</div>
+          <div class="check">Terraform infra with environments</div>
+          <div class="check">Monitoring dashboard with alerts</div>
+          <div class="check">Short demo video or screenshots</div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div>
+          Built for learning. Share it and keep iterating.
+        </div>
+        <div>
+          Update this site as you gain experience and add real projects.
+        </div>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
