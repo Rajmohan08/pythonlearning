@@ -1,0 +1,272 @@
+:root {
+  --ink: #0f1d1d;
+  --muted: #5a6a68;
+  --paper: #f4f1ed;
+  --sand: #f0e3d5;
+  --sea: #1a6c6a;
+  --ember: #e36a3b;
+  --shadow: rgba(15, 29, 29, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top left, #ffffff 0%, var(--paper) 45%, #efe5d8 100%);
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 28px 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: clamp(2.4rem, 3vw, 3.6rem);
+  letter-spacing: -0.02em;
+  margin: 10px 0 16px;
+}
+
+.hero-copy {
+  font-family: "IBM Plex Serif", serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 520px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  color: var(--sea);
+  font-weight: 600;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: linear-gradient(120deg, var(--sea), var(--ember));
+  color: white;
+  box-shadow: 0 10px 30px rgba(26, 108, 106, 0.25);
+}
+
+.btn-secondary {
+  color: var(--sea);
+  border-color: rgba(26, 108, 106, 0.35);
+  background: white;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.hero-tags span {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--sand);
+  font-size: 0.85rem;
+}
+
+.hero-panel {
+  background: white;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px var(--shadow);
+  border: 1px solid rgba(26, 108, 106, 0.08);
+}
+
+.panel-title {
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--sea);
+}
+
+.hero-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+  display: grid;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.panel-highlight {
+  background: var(--sand);
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.section-header h2 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.section-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 12px 32px rgba(15, 29, 29, 0.08);
+  border: 1px solid rgba(15, 29, 29, 0.06);
+  min-height: 180px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.deliverable {
+  margin-top: 16px;
+  font-weight: 600;
+  color: var(--sea);
+}
+
+.flowchart {
+  background: white;
+  padding: 24px;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(15, 29, 29, 0.1);
+}
+
+.flowchart svg {
+  width: 100%;
+  height: auto;
+}
+
+.flowchart rect {
+  fill: url(#grad);
+  opacity: 0.92;
+}
+
+.flowchart text {
+  fill: white;
+  font-weight: 600;
+  font-size: 18px;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+
+.flowchart path {
+  stroke: #0f1d1d;
+  stroke-width: 2.5;
+  fill: none;
+  marker-end: url(#arrow);
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.links-grid a {
+  text-decoration: none;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(26, 108, 106, 0.2);
+  color: var(--ink);
+  background: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.links-grid a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(26, 108, 106, 0.12);
+}
+
+.checklist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.check {
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: var(--sand);
+  font-weight: 600;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(15, 29, 29, 0.08);
+  padding-top: 26px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: all 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 800px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .flowchart {
+    padding: 16px;
+  }
+
+  .flowchart text {
+    font-size: 14px;
+  }
+}
